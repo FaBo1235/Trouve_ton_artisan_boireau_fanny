@@ -45,8 +45,8 @@ export default function Navbar() {
         );
         const data = await response.json();
 
-        if (!response.ok) {
-          setError(data.message || "Erreur de recherche");
+        if (!response.ok || data.length === 0) {
+          navigate("/error");
           return;
         }
 
