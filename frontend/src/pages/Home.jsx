@@ -21,7 +21,7 @@ export default function Home() {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold mb-6 text-center text-[#384050]">Comment trouver son artisan ? </h1>
+            <h1 className="text-4xl font-bold mb-6 text-center dark:text-[#f1f8fc] text-[#384050]">Comment trouver son artisan ? </h1>
             <div className="flex flex-col items-center my-24">
                     
                 <div className="flex justify-center items-center w-full relative">
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className=' flex flex-col  min-h-screen'>
                 <div className='flex justify-start flex-col'>
-                <h2 className='font-bold text-2xl text-[#384050] py-18 m-1'>Artisan du mois</h2>
+                <h2 className='font-bold text-2xl text-[#384050] dark:text-[#f1f8fc] py-18 m-1'>Artisan du mois</h2>
                 </div>
                 <div>
                  <ArtisanCard artisans={artisans} />   
