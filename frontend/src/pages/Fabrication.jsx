@@ -21,7 +21,7 @@ export default function Fabrication() {
       {artisans.map((artisan) => (
         <Link key={artisan.id} to={`/artisan/${artisan.id}`}>
           <div className="min-w-[250px] p-6 rounded-3xl-[#0074C7]">
-            <div className="w-30 h-30 rounded-full border mx-auto mb-4 overflow-hidde dark:bg-[#f1f7fc]">
+            <div className="w-30 h-30 rounded-full border mx-auto mb-4 overflow-hidde">
               <img src={utilisateur} alt="photo utilisateur" />
             </div>
             <h3 className="text-[#00497C]">{artisan.nom}</h3>
