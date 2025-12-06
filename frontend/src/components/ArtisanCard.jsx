@@ -12,7 +12,7 @@ export default function ArtisanCard() {
   const scrollRef = useRef(null);
 
     useEffect(() => {
-      fetch("http://localhost:4000/api/artisans")
+      fetch("https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans")
       .then((res) => res.json())
       .then((data) => {
         const topArtisans = data.filter(a => a.top === "Vrai");

@@ -40,9 +40,7 @@ export default function Navbar() {
 
     const fetchResults = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:4000/api/artisans/search?q=${query}`
-        );
+        const response = await fetch(`https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans/search?q=${query}`)
         const data = await response.json();
 
         if (!response.ok || data.length === 0) {

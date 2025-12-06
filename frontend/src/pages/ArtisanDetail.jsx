@@ -14,7 +14,7 @@ export default function ArtisanDetail() {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/artisans/${id}`)
+    fetch(`https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Erreur lors du chargement de l'artisan");
         return res.json();
