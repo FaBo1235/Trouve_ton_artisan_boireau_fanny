@@ -25,4 +25,7 @@ sequelize.sync({ alter: true })
 
 // Lancement du serveur
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Serveur backend lancé sur le port ${PORT}`));
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
+
