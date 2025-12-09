@@ -9,23 +9,33 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}));
+app.use(cors());
 app.use(express.json());
 
-// Routes
+// Test route (important pour Railway)
+app.get("/", (req, res) => {
+  res.json({ message: "API en ligne" });
+});
+
+// Routes API
 app.use("/api/artisans", artisanRoutes);
 
-// Synchronisation de la base
-sequelize.sync({ alter: true })
-  .then(() => console.log("Base de données synchronisée"))
-  .catch(err => console.error("Erreur de connexion à la base :", err));
+// Connexion DB + lancement serveur
+async function startServer() {
+  try {
+    await sequelize.authenticate();
+    console.log("Connexion DB OK");
 
-// Lancement du serveur
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
-});
+
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, () =>
+      console.log("Server running on port " + PORT)
+    );
+  } catch (error) {
+    console.error("Erreur DB :", error);
+  }
+}
+
+startServer();
+
 
