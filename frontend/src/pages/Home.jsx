@@ -1,16 +1,8 @@
 //import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ArtisanCard from '../components/ArtisanCard';
 
 export default function Home() {
-    const [artisans, setArtisans] = useState([]);
-
-    useEffect(() => {
-        fetch("https://localhost:400/api/artisans?top=true")
-            .then((response) => response.json())
-            .then((data) => setArtisans(data))
-            .catch((error) => console.error(error));
-    }, []);
 
     const etape = [
         { number: 1, text: "Choisir une catégorie" },
@@ -42,7 +34,7 @@ export default function Home() {
                 <h2 className='font-bold text-2xl text-[#384050] dark:text-[#f1f8fc] py-18 m-1'>Artisan du mois</h2>
                 </div>
                 <div>
-                 <ArtisanCard artisans={artisans} />   
+                 <ArtisanCard />   
                 </div>
             </div>
         </div>

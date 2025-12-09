@@ -12,14 +12,18 @@ export default function ArtisanCard() {
   const scrollRef = useRef(null);
 
     useEffect(() => {
-      fetch("https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans")
-      .then((res) => res.json())
-      .then((data) => {
-        const topArtisans = data.filter(a => a.top === "Vrai");
-        setArtisans(topArtisans);
-      })
-      .catch ((err) => { console.error("Erreur chargement artisans :", err); });
-    }, []);
+    fetch("https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans")
+    .then(res => res.json())
+      .then(data => {
+      console.log("Données artisans chargées :", data);
+      const topArtisans = data.filter(a =>
+        a.top && (a.top.toLowerCase() === "vrai" || a.top.toLowerCase() === "true")
+      )
+      setArtisans(topArtisans)
+    })
+    .catch(err => console.error("Erreur chargement artisans :", err))
+    }, [])
+
 
     
     const scrollLeft = () => {
