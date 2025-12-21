@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/db.js";
 
-export const Artisan = sequelize.define("Artisan", {
+export const Artisans = sequelize.define("Artisans", {
   
   nom: {
     type: DataTypes.STRING,
@@ -12,7 +12,7 @@ export const Artisan = sequelize.define("Artisan", {
     allowNull: false,
   },
 
-  categorie: { 
+  categorie: {
     type: DataTypes.STRING,
     allowNull: true,
   },
@@ -45,4 +45,12 @@ export const Artisan = sequelize.define("Artisan", {
     type: DataTypes.TEXT,
     allowNull: true,
   },
-});
+},
+
+{
+    tableName: "Artisans", 
+    timestamps: false, 
+  }
+
+
+);

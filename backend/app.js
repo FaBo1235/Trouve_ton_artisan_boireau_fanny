@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Test route (important pour Railway)
+// Test route
 app.get("/", (req, res) => {
   res.json({ message: "API en ligne" });
 });
@@ -26,6 +26,8 @@ async function startServer() {
     await sequelize.authenticate();
     console.log("Connexion DB OK");
 
+    await sequelize.sync({ alter: true });
+    console.log("Tables synchronisées");
 
     const PORT = process.env.PORT || 4000;
     app.listen(PORT, () =>
