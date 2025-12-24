@@ -1,0 +1,190 @@
+export const artisanData = [
+  {
+    nom: " Boucherie Dumont",
+    specialite: "Boucher",
+    categorie: "Alimentaire",
+    localisation: "Lyon",
+    note: 4.5,
+    email: "boucherie.dumond@gmail.com",
+    site_web: null,
+    top: "Faux",
+    description: "Lorem ipsum"
+  },
+  {
+    nom: "Au pain chaud",
+    specialite: "Boulanger",
+    categorie: "Alimentaire",
+    localisation: "Montélimar",
+    note: 4.8,
+    email: "aupainchaud@hotmail.com",
+    site_web: null,
+    top: "Vrai",
+    description: "Lorem ipsum"
+  },
+  {
+    nom: "Chocolaterie Labbé",
+    specialite: "Chocolatier",
+    categorie: "Alimentaire",
+    localisation: "Lyon",
+    note: 4.9,
+    email: "chocolaterie-labbe@gmail.com",
+    site_web: "https://chocolaterie-labbe.fr",
+    top: "Vrai",
+    description: "Lorem ipsum"
+    },
+  {
+    nom: "Traiteur Truchon",
+    specialite: "Traiteur",
+    categorie: "Alimentaire",
+    localisation: "Lyon",
+    note: 4.1,
+    email: "https://truchon-traiteur.fr",
+    site_web: "https://truchon-traiteur.fr",
+    top: "Faux",
+    description: "Lorem ipsum"
+  },
+  {
+    nom: "Orville Salmons",
+    specialite: "Chauffagiste",
+    categorie: "Bâtiment",
+    localisation: "Evian",
+    note: 5,
+    email: "o-salmons@live.com",
+    site_web: null,
+    top: "Vrai",
+    description: "Lorem ipsum"
+    },
+  {
+    nom: "Mont Blanc Électricité",
+    specialite: "Électricien",
+    categorie: "Bâtiment",
+    localisation: "Chamonix",
+    note: 4.5,
+    email: "contact@mont-blanc-electricite.com",
+    site_web: "https://mont-blanc-electricite.com",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+    nnom: "Boutot & fils",
+    specialite: "Menuisier",
+    categorie: "Bâtiment",
+    localisation: "Bourg-en-Bresse",
+    note: 4.7,
+    email: "boutot-menuisierie@gmail.com",
+    site_web: "https://boutot-menuisierie.com",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+    nom: "Vallis Bellemare",
+    specialite: "Plombier",
+    categorie: "Bâtiment",
+    localisation: "Vienne",
+    note: 4,
+    email: "v.bellemare@gmail.com",
+    site_web: "https://plomberie-bellemare.com",
+    top: "Faux",
+    description: "Lorem ipsum"
+  },
+  {
+    nom: "Claude Quinn",
+    specialite: "Bijoutier",
+    categorie: "Fabrication",
+    localisation: "Aix-les-Bains",
+    note: 4.2,
+    email: "cclaude.quinn@gmail.com",
+    site_web: null,
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Amitee Lécuyer",
+    specialite: "Couturier",
+    categorie: "Fabrication",
+    localisation: "Annecy",
+    note: 4.5,
+    email: "a.amitee@hotmail.com",
+    site_web: "https://lecuyer-couture.com",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Ernest Carignan",
+    specialite: "Ferrorier",
+    categorie: "Fabrication",
+    localisation: "Le Puy-en-Velay",
+    note: 5,
+    email: "e-carigan@hotmail.com",
+    site_web: null,
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Royden Charbonneau",
+    specialite: "Coiffeur",
+    categorie: "Services",
+    localisation: "Saint-Priest",
+    note: 3.8,
+    email: "r.charbonneau@gmail.com",
+    site_web: null,
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Leala Dennis",
+    specialite: "Coiffeur",
+    categorie: "Services",
+    localisation: "Chambéry",
+    note: 3.8,
+    email: "l.dennos@hotmail.com",
+    site_web: "https://coiffure-leala-chambery.fr",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "C'est sup'hair",
+    specialite: "Coiffeur",
+    categorie: "Services",
+    localisation: "Romans-sur-Isère",
+    note: 4.1,
+    email: "sup-hair@gmail.com",
+    site_web: "https://sup-hair.fr",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Le monde des fleurs",
+    specialite: "Fleuriste",
+    categorie: "Services",
+    localisation: "Annonay",
+    note: 4.6,
+    email: "contact@le-monde-des-fleurs-annonay.fr",
+    site_web: "https://le-monde-des-fleurs-annonay.fr",
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "Valérie Laredoute",
+    specialite: "Toiletteur",
+    categorie: "Services",
+    localisation: "Valence",
+    note: 4.5,
+    email: "v-laredoute@gmail.com",
+    site_web: null,
+    top: "Faux",
+    description: "Lorem ipsum"
+    },
+  {
+   nom: "CM Graphique",
+    specialite: "webdesign",
+    categorie: "Services",
+    localisation: "Valence",
+    note: 4.4,
+    email: "contact@lcm-graphiste.com",
+    site_web: "https://cm-graphiste.com",
+    top: "Faux",
+    description: "Lorem ipsum"
+  },
+  
+];
