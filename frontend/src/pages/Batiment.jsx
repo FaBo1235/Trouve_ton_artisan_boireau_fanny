@@ -5,14 +5,15 @@ import StarRating from "../components/StarRating";
 
 export default function Batiment() {
   const [artisans, setArtisans] = useState([]);
+  const API_URL = "https://trouvetonartisanboireaufanny-production.up.railway.app";
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/artisans")
+    fetch(`${API_URL}/api/artisans`)
       .then((res) => res.json())
       .then((data) => {
         // filtrage uniquement sur la catégorie “Batiment”
-        const food = data.filter((a) => a.categorie === "Bâtiment");
-        setArtisans(food);
+        const bat = data.filter((a) => a.categorie === "Bâtiment");
+        setArtisans(bat);
       });
   }, []);
 

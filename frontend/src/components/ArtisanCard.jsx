@@ -1,97 +1,65 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import utilisateur from "../assets/img/utilisateur.png";
 import StarRating from "./StarRating";
 
-
-
+const API_URL =
+  "https://trouvetonartisanboireaufanny-production.up.railway.app";
 
 export default function ArtisanCard() {
-
   const [artisans, setArtisans] = useState([]);
   const scrollRef = useRef(null);
 
-    useEffect(() => {
-    fetch("https://trouvetonartisanboireaufanny-production.up.railway.app/api/artisans")
-    .then(res => res.json())
-      .then(data => {
-      console.log("Données artisans chargées :", data);
-      const topArtisans = data.filter(a =>
-        a.top && (a.top.toLowerCase() === "vrai" || a.top.toLowerCase() === "true")
-      )
-      setArtisans(topArtisans)
-    })
-    .catch(err => console.error("Erreur chargement artisans :", err))
-    }, [])
+  useEffect(() => {
+    fetch(`${API_URL}/api/artisans`)
+      .then((res) => res.json())
+      .then((data) => {
+        const topArtisans = data.filter(
+          (a) =>
+            a.top &&
+            (a.top.toLowerCase() === "vrai" ||
+              a.top.toLowerCase() === "true")
+        );
+        setArtisans(topArtisans);
+      })
+      .catch((err) =>
+        console.error("Erreur chargement artisans :", err)
+      );
+  }, []);
 
+  if (artisans.length === 0) {
+    return <p>Aucun artisan du mois</p>;
+  }
 
-    
-    const scrollLeft = () => {
-        scrollRef.current.scrollBy({ left: -250, behavior: 'smooth' });
-    }
-
-    const scrollRight = () => {
-        scrollRef.current.scrollBy({ left: 250, behavior: 'smooth' });
-    }
-
-
-
-    return (
-    <div className="relative my-10">
-      {/* Bouton gauche */}
-      <button
-        onClick={scrollLeft}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#0074c7] text-white rounded-full p-2 shadow-lg z-10 hover:bg-[#005fa3] lg:hidden"
-      >
-        ◀
-      </button>
-
-      {/* Conteneur scrollable */}
+  return (
+    <div className="relative">
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto gap-6 px-10 scroll-smooth scrollbar-hide lg:overflow-x-visible"
+        className="flex gap-6 overflow-x-auto py-6"
       >
         {artisans.map((artisan) => (
           <Link key={artisan.id} to={`/artisan/${artisan.id}`}>
-            <div className="min-w-[250px] bg-[#f6efef] p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 cursor-pointer">
-              {/* Photo ronde */}
-              <div className="mx-auto w-20 h-20 border border-gray-400 rounded-full mb-4 flex items-center justify-center overflow-hidden">
-                <img
-                  src={utilisateur}
-                  alt={artisan.nom}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="min-w-[260px] bg-white rounded-xl shadow p-6 text-center">
+              <img
+                src={utilisateur}
+                alt={artisan.nom}
+                className="w-20 h-20 mx-auto rounded-full mb-4"
+              />
 
-              {/* Nom */}
-              <h3 className="text-[#00497c] font-semibold text-lg mb-1">
-                {artisan.nom}
-              </h3>
+              <h3 className="font-semibold">{artisan.nom}</h3>
+              <p className="text-sm text-gray-500">
+                {artisan.specialite}, {artisan.localisation}
+              </p>
 
-              {/* Spécialité + ville */}
-              <p className="text-gray-600 text-sm mb-2">{artisan.specialite}, {artisan.localisation}</p>
+              <StarRating rating={artisan.note} />
 
-
-              <div>
-                <StarRating rating={artisan.note} size={14}/>
-              </div>
-
-              <button className="mt-3 bg-[#0074c7] text-white px-4 py-2 rounded hover:bg-[#005fa3]">
+              <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
                 Voir le profil
               </button>
-
             </div>
-            </Link>
+          </Link>
         ))}
       </div>
-
-      {/* Bouton droit */}
-      <button
-        onClick={scrollRight}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#0074c7] text-white rounded-full p-2 shadow-lg z-10 hover:bg-[#005fa3] lg:hidden"
-      >
-        ▶
-      </button>
     </div>
   );
 }

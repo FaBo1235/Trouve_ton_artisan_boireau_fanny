@@ -5,9 +5,10 @@ import StarRating from "../components/StarRating";
 
 export default function Alimentation() {
   const [artisans, setArtisans] = useState([]);
+  const API_URL = "https://trouvetonartisanboireaufanny-production.up.railway.app";
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/artisans")
+    fetch(`${API_URL}/api/artisans`)
       .then((res) => res.json())
       .then((data) => {
         // filtrage uniquement sur la catégorie “Alimentation”
