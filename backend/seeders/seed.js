@@ -8,7 +8,7 @@ async function seed() {
     await sequelize.authenticate();
     console.log("Connexion DB OK");
 
-    await Artisan.destroy({ where: {} });
+    await sequelize.sync({ force: true });
     console.log("Table Artisan vidée");
 
     // Insère les artisans

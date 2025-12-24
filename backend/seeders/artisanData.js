@@ -1,6 +1,6 @@
 export const artisanData = [
   {
-    nom: " Boucherie Dumont",
+    nom: "Boucherie Dumont",
     specialite: "Boucher",
     categorie: "Alimentaire",
     localisation: "Lyon",
@@ -38,7 +38,7 @@ export const artisanData = [
     categorie: "Alimentaire",
     localisation: "Lyon",
     note: 4.1,
-    email: "https://truchon-traiteur.fr",
+    email: "contact@truchon-traiteur.fr",
     site_web: "https://truchon-traiteur.fr",
     top: "Faux",
     description: "Lorem ipsum"
@@ -66,7 +66,7 @@ export const artisanData = [
     description: "Lorem ipsum"
     },
   {
-    nnom: "Boutot & fils",
+    nom: "Boutot & fils",
     specialite: "Menuisier",
     categorie: "Bâtiment",
     localisation: "Bourg-en-Bresse",
