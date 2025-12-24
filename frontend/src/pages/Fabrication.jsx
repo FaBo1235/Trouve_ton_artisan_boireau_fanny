@@ -21,19 +21,19 @@ export default function Fabrication() {
     <div className="flex flex-wrap gap-6 justify-center p-10">
       {artisans.map((artisan) => (
         <Link key={artisan.id} to={`/artisan/${artisan.id}`}>
-          <div className="min-w-[250px] p-6 rounded-3xl-[#0074C7]">
+          <div className="min-w-[260px] bg-[#f1f8fc] rounded-xl shadow p-6 text-center">
             <div className="w-30 h-30 rounded-full border mx-auto mb-4 overflow-hidde">
               <img src={utilisateur} alt="photo utilisateur" />
             </div>
             <h3 className="text-[#00497C]">{artisan.nom}</h3>
 
+            <p className="text-[#384050] text-sm">{artisan.specialite}, {artisan.localisation}</p>
             <div>
               <StarRating rating={artisan.note} />
             </div>
 
-            <p className="text-[#384050] dark:text-[#f1f8fc] text-sm">{artisan.specialite}, {artisan.localisation}</p>
-
-            <button className=" flex justify-center mt-3 bg-[#0074c7] text-white px-4 py-2 rounded hover:bg-[#005fa3]">
+      
+            <button className=" flex justify-center mt-3 bg-[#0074c7] text-[#f1f8fc] px-4 py-2 rounded hover:bg-[#005fa3]">
             Voir le profil
             </button>
 

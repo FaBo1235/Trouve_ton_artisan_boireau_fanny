@@ -39,7 +39,7 @@ export default function ArtisanCard() {
       >
         {artisans.map((artisan) => (
           <Link key={artisan.id} to={`/artisan/${artisan.id}`}>
-            <div className="min-w-[260px] bg-white rounded-xl shadow p-6 text-center">
+            <div className="min-w-[260px] bg-[#f1f8fc] rounded-xl shadow p-6 text-center">
               <img
                 src={utilisateur}
                 alt={artisan.nom}
