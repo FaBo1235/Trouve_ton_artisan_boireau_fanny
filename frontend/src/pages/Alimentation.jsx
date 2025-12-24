@@ -21,7 +21,7 @@ export default function Alimentation() {
     <div className="flex flex-wrap gap-6 justify-center p-10">
       {artisans.map((artisan) => (
         <Link key={artisan.id} to={`/artisan/${artisan.id}`}>
-          <div className="min-w-[250px] p-6 rounded-3xl-[#0074C7] dark:bg-[#f1f8fC]">
+          <div className="min-w-[250px] p-6 rounded-3xl-[#0074C7]">
             <div className="w-30 h-30 rounded-full border mx-auto mb-4 overflow-hidden">
               <img src={utilisateur} alt="photo utilisateur" />
             </div>
