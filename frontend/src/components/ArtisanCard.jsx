@@ -46,14 +46,14 @@ export default function ArtisanCard() {
                 className="w-20 h-20 mx-auto rounded-full mb-4"
               />
 
-              <h3 className="font-semibold">{artisan.nom}</h3>
-              <p className="text-sm text-gray-500">
+              <h3 className="font-semibold text-[#00497C]">{artisan.nom}</h3>
+              <p className="text-sm text-[#384050]">
                 {artisan.specialite}, {artisan.localisation}
               </p>
 
               <StarRating rating={artisan.note} />
 
-              <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
+              <button className="mt-4 bg-[#0074C7] text-[#f1f8fc] px-4 py-2 rounded">
                 Voir le profil
               </button>
             </div>

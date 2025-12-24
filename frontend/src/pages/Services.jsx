@@ -31,7 +31,7 @@ export default function Services() {
               <StarRating rating={artisan.note} />
             </div>
 
-            <p className="text-[#384050] text-sm">{artisan.specialite}, {artisan.localisation}</p>
+            <p className="text-[#384050] dark:text-[#f1f8fc] text-sm">{artisan.specialite}, {artisan.localisation}</p>
 
             <button className=" flex justify-center mt-3 bg-[#0074c7] text-white px-4 py-2 rounded hover:bg-[#005fa3]">
             Voir le profil

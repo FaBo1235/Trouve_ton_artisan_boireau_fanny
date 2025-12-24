@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex justify-between mb-20">
         {etape.map((e) => (
           <div key={e.number} className="text-center w-1/4">
-            <div className="bg-blue-600 text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center text-xl font-bold">
+            <div className="bg-[#0074C7] text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center text-xl font-bold">
               {e.number}
             </div>
             <p className="mt-3">{e.text}</p>

@@ -11,7 +11,7 @@ export default function Alimentation() {
     fetch(`${API_URL}/api/artisans`)
       .then((res) => res.json())
       .then((data) => {
-        // filtrage uniquement sur la catégorie “Alimentation”
+        // filtrage uniquement sur la catégorie “Alimentaire”
         const food = data.filter((a) => a.categorie === "Alimentaire");
         setArtisans(food);
       });
@@ -31,7 +31,7 @@ export default function Alimentation() {
               <StarRating rating={artisan.note} />
             </div>
 
-            <p className="text-[#384050] text-sm">{artisan.specialite}, {artisan.localisation}</p>
+            <p className="text-[#384050] text-sm dark:text-[#f1f8fc]">{artisan.specialite}, {artisan.localisation}</p>
 
             <button className=" flex justify-center mt-3 bg-[#0074c7] text-white px-4 py-2 rounded hover:bg-[#005fa3]">
             Voir le profil
