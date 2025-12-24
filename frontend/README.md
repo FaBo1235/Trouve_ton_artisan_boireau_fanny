@@ -1,16 +1,36 @@
-# React + Vite
+1.Description 2.Fonctionnalités 3.Technologies 4.Installation 5.Usage 6.Licence 7.Contact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    Description
 
-Currently, two official plugins are available:
+    Mon application est le site web de mise en relation entre artisans d'Auvergne-Rhône-Alpes et de particuliers vivant dans cette même région.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Fonctionnalités
 
-## React Compiler
+    Mise en contact à l'aide d'un formulaire entre artisan et particulier.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    Technologies
 
-## Expanding the ESLint configuration
+    HTML, CSS, JS, React, tailwind, Sequelize, phpmyadmin
+    Outils : Git, GitHub, Vercel, Railway
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    Installation
+
+    Prérequis
+
+    Node.js >= 18
+    npm
+    git
+
+    Usage
+
+    Ouvrir le navigateur
+
+    Licence
+
+    Ce projet est sous licence MIT - voir le fichier LICENCE pour plus de détails.
+
+    Contact
+
+    Nom : Doe
+    adresse mail : contact@mon-artisan.com
+
